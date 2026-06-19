@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function TablaInventario({ maniquies, handleEliminar, prepararEdicion }) {
   
   const obtenerClaseEstado = (estado) => {
@@ -53,9 +52,9 @@ export default function TablaInventario({ maniquies, handleEliminar, prepararEdi
           ))}
           
           {maniquies.length === 0 && (
-            <tr>
-              <td colSpan="6" className="text-center text-detail" style={{ padding: '20px' }}>
-                No hay maniquíes registrados en MySQL.
+           <tr>
+              <td colSpan="6" className="text-center text-detail td-vacia">
+                No hay maniquíes registrados
               </td>
             </tr>
           )}

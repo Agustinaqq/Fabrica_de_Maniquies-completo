@@ -10,11 +10,11 @@
 }
 
 .main-title {
-  color: #333;
+  color: #ffffff;
 }
 
 .main-subtitle {
-  color: #666;
+  color: #000000;
 }
 
 .flex-layout {
@@ -26,10 +26,10 @@
 .form-box {
   flex: 1;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   height: fit-content;
-  background-color: #f9f9f9;
+  background-color: #040404;
 }
 
 .form-box h3 {
@@ -50,7 +50,7 @@
   width: 100%;
   padding: 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   box-sizing: border-box;
 }
 
@@ -92,15 +92,15 @@
 }
 
 .data-table th {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
 }
 
 .data-table td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
 }
 
 .row-centered {
@@ -113,7 +113,7 @@
 
 .text-detail {
   font-size: 14px;
-  color: #555;
+  color: #ffffff;
 }
 
 .badge-status {
@@ -163,4 +163,8 @@
   cursor: pointer;
   font-size: 12px;
   margin-right: 5px;
+}
+
+.td-vacia {
+  padding: 20px;
 }

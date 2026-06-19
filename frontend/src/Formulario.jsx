@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Formulario({ 
+
   nombreModelo, setNombreModelo, 
   estado, setEstado, 
   material, setMaterial, 
@@ -9,6 +10,7 @@ export default function Formulario({
   maniquiAEditar,
   cancelarEdicion
 }) {
+
   return (
     <div className="form-box">
       <h3>{maniquiAEditar ? 'Editar Maniquí' : 'Nuevo Maniquí'}</h3>
@@ -41,7 +43,7 @@ export default function Formulario({
           <select className="form-input" value={material} onChange={(e) => setMaterial(e.target.value)}>
             <option value="Plástico ABS">Plástico ABS</option>
             <option value="Fibra de Vidrio">Fibra de Vidrio</option>
-            <option value="Madera de Haya">Madera de Haya</option>
+            <option value="Madera de Haya">Madera</option>
             <option value="Silicona">Silicona</option>
           </select>
         </div>
@@ -57,7 +59,7 @@ export default function Formulario({
         </div>
 
         <button type="submit" className="btn-guardar">
-          {maniquiAEditar ? 'Actualizar Cambios' : 'Guardar Maniquí'}
+          {maniquiAEditar ? 'Actualizar' : 'Guardar'}
         </button>
 
         {maniquiAEditar && (

@@ -94,7 +94,6 @@ app.delete('/maniquies/:id', async (req, res) => {
   const { id } = req.params;
   try {
     await db.query('DELETE FROM piezas WHERE id_maniqui = ?', [id]);
-    // Luego borramos el maniquí
     await db.query('DELETE FROM maniquies WHERE id_maniqui = ?', [id]);
     res.status(200).json({ mensaje: 'Maniquí eliminado con éxito' });
   } catch (error) {

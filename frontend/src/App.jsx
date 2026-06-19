@@ -4,13 +4,13 @@ import Formulario from './Formulario';
 import TablaInventario from './TablaInventario'; 
 
 function App() {
+  //memoria del componente
   const [maniquies, setManiquies] = useState([]);
   const [nombreModelo, setNombreModelo] = useState('');
   const [estado, setEstado] = useState('Disponible');
   const [material, setMaterial] = useState('Plástico ABS');
   const [color, setColor] = useState('Blanco Mate');
-  
-  const [maniquiAEditar, setManiquiAEditar] = useState(null);
+  const [maniquiAEditar, setManiquiAEditar] = useState(null)
 
   const API_URL = 'http://localhost:3000/maniquies';
 
@@ -22,18 +22,16 @@ function App() {
     try {
       const respuesta = await fetch(API_URL);
       const datos = await respuesta.json();
-      setManiquies(datos); 
+      setManiquies(datos);
     } catch (error) {
       console.error('Error al traer los maniquíes de MySQL:', error);
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => { 
     
     const urlDestino = maniquiAEditar ? `${API_URL}/${maniquiAEditar.id_maniqui}` : API_URL;
-    const metodo = maniquiAEditar ? 'PUT' : 'POST';
-
+    const metodo = maniquiAEditar ? 'PUT' : 'POST'; 
     try {
       const respuesta = await fetch(urlDestino, {
         method: metodo,
@@ -67,7 +65,7 @@ function App() {
     setManiquiAEditar(maniqui);
     setNombreModelo(maniqui.nombre_modelo);
     setEstado(maniqui.estado);
-    
+
     const primerMaterial = maniqui.materiales ? maniqui.materiales.split(', ')[0] : 'Plástico ABS';
     const primerColor = maniqui.colores ? maniqui.colores.split(', ')[0] : 'Blanco Mate';
     
